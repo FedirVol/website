@@ -16,7 +16,7 @@ body {
   line-height: 1.5;
   letter-spacing: -0.5px;
   background-color: #202020;
-  
+
 }
 
 img { max-width: 100%; }
@@ -173,7 +173,7 @@ a:hover { opacity: .8; }
 
 /* Contact */
 :root {
-  --accent: #27e0d6;
+  --accent: #959595;
   --card: #1b1b1b;
   --field: #2a2a2a;
   --field-border: #3a3a3a;
