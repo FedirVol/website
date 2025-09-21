@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-/* 
-SemiBold 600
-Bold 700
-ExtraBold 800
-*/
 
-/* -----------
-    Styles
------------- */
+/* Base */
+*,
+*::before,
+*::after { box-sizing: border-box; }
 
-body { 
+html { scroll-behavior: smooth; }
+
+body {
   margin: 0;
   color: #959595;
   font-family: "Manrope", sans-serif;
@@ -17,57 +15,14 @@ body {
   font-size: 20px;
   line-height: 1.5;
   letter-spacing: -0.5px;
-  
   background-color: #202020;
-}
-
-img {
-  max-width: 100%;
-}
-
-.logo {
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-
-.btn {
-  display: inline-flex; 
-  align-items: center;
-  gap: 5px; 
-  padding: 16px 48px;
-
-  font-size: 18px;
-  color: #FFFFFF;
- 
-  background: #9D9D9D;
-  border-radius: 4px;
-}
-
-  .btn::before {
-    content: "";
-    background-image: url("../images/mail.svg");
-    background-size: contain;
-    background-position:center;
-    background-repeat: no-repeat;
-    width: 22px;
-    height: 19px;
-}
-
-
-
   
-a {
-    color: #DEDEDE;
-    text-decoration: none;
-    transition: opacity 0.6s;
 }
 
-a:hover {
-  opacity: 0.8;
-}
+img { max-width: 100%; }
+
+a { color: #DEDEDE; text-decoration: none; transition: opacity .6s; }
+a:hover { opacity: .8; }
 
 .container {
   max-width: 1250px;
@@ -76,14 +31,31 @@ a:hover {
   padding: 0 15px;
 }
 
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 48px;
+  font-size: 18px;
+  color: #fff;
+  background: #9D9D9D;
+  border-radius: 4px;
+  border: none;
+}
+.btn::before{
+  content: "";
+  background-image: url("images/mail.svg");
+  background-size: contain;
+  background-position:center;
+  background-repeat: no-repeat;
+  width: 22px; height: 19px;
+}
 
-/* -----------
-    Header
------------- */
-
+/* Header */
 .header {
+
   padding: 20px 0;
-  
   background: rgba(50, 50, 50, 0.7);
   backdrop-filter: blur(10px);
 
@@ -93,352 +65,186 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
+.logo { font-weight: 800; display: flex; align-items: center; gap: 10px; }
+.header__nav { display: flex; gap: 60px; }
+.header__limk { font-weight: 700; font-size: 20px; }
 
+/* Welcome */
+.main {}
 
-.header__nav {
-  display: flex;
-  gap: 60px;
-
-}
-
-.header__limk {
-  font-weight: 700;
-  font-size: 20px;
-
-}
-
-/* -----------
-    Main
------------- */
-
-.main {
-
-}
-
-.welcome {
-  margin-top: 160px;
-
-}
-
-
-/* -----------
-    Welcome
------------- */
-
+.welcome { margin-top: 160px; }
 .welcome .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.welcome__desc {
-
-}
-
 .welcome__title {
-width: 500px;
-margin-bottom: 24px;
-margin-top: 0px;
-
-font-weight: 700;
-font-size: 54px;
-line-height: 1.19;
-color: #DEDEDE;
-
-
-
-}
-
-.welcome__text {
   width: 500px;
-  margin-bottom: 88px;
-
+  margin: 0 0 24px;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 1.19;
+  color: #DEDEDE;
+}
+.welcome__text { width: 500px; margin-bottom: 88px; }
+.welcome__img {
+  margin-right: 105px;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  object-fit: cover; object-position: center;
 }
 
-
-/* Стили для секции "Über mich" */
+/* Über mich */
 #about {
   max-width: 800px;
   margin: 60px auto;
   padding: 20px;
-  background-color: #1c1c1c; /* темно-серый фон, как на сайте */
+  background-color: #1c1c1c;
   border-radius: 10px;
   text-align: center;
 }
+#about h2 { font-size: 2rem; margin-bottom: 20px; color: #DEDEDE; }
+#about p  { font-size: 1.1rem; line-height: 1.6; color: #959595; }
 
-#about h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #DEDEDE;
-}
-
-#about p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #959595;
-}
-
-
-
-
-
-
-
-.welcome__btn {
-
-}
-
-.welcome__img {
-margin-right: 105px;
-width: 400px;
-height: 400px;
-border-radius: 50%;
-
-object-fit: cover;
-object-position: center;
-}
-
-
-/* -----------
-    Works
------------- */
-
-
-.works {
-  margin-top: 148px;
-}
-
-.container {
-
-}
-
+/* Works (кнопка) */
+.works { margin-top: 120px; }
 .works__btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 20px;
-  background-color: transparent;
+  background: transparent;
   border: none;
   padding: 0;
-  margin-bottom: 80px;
- 
-
-  font-family: 'Manrope';
+  margin-bottom: 16px;
+  font-family: "Manrope";
   font-weight: 700;
   font-size: 16px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-
   color: #DEDEDE;
-
-  opacity: 0.7;
-
-
-
-
-
+  opacity: .7;
 }
 
-.works__icon {
-
-}
-
-.works_wrapper {
-  display: grid;
-  grid-template-columns:1fr 1fr;
-  gap: 25px;
-  padding-top: 140px;
-
-}
-
-.work {
-  height: 888px;
-  position: relative;
-
-}
-
-
-.work:nth-child(odd) {
-
-  
-  margin-top: -140px;
-
-}
-
-  .work:hover {
-     
-    opacity: 1;
-  }
-
-.work__img {
-  width: 100%;
-  height: 100%;
-  /* object-fit: cover;
-  object-position: left; */
-
-}
-
-.work__name {
-
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,  0,  0, 0.6);
-
-  font-weight: 700;
-  font-size: 40px;
-
-
-
-
-
-
-  color: #DEDEDE;
-
-
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.5s;
-}
-
-.work:hover .work__name {
-  opacity: 1;
-}
-
-
-
-.projects {
-  margin-top: 240px;
-
-}
-
-
-
-.container {
-
-}
-
+/* Projects */
+.projects { margin-top: 48px; }
 .projects__title {
-margin-bottom: 65px;
-font-size: 36px;
-line-height: 49px;
-text-align: center;
-
-color: #DEDEDE;
-
-
+  margin-bottom: 24px;
+  font-size: 36px;
+  line-height: 49px;
+  text-align: center;
+  color: #DEDEDE;
 }
 
-.projects__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-evenly;  
-
+/* Сетка карточек – кликабельные превью */
+.projects__wrapper{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+  justify-items: center;
 }
 
-.projects__img {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-  object-position: center;
-
+/* Карточка */
+.projects__wrapper .work{
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: 360px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
 }
-
-
-.projects--vertical .projects__img {
-  height: 560px;
-  
+.projects__wrapper .work .work__img{
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
 }
+.projects__wrapper .work .work__name{
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 28px; color: #DEDEDE;
+  background: rgba(0,0,0,.55);
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+.projects__wrapper .work:hover .work__name{ opacity: 1; }
 
+.projects--vertical .work{ height: 560px; }
 
-
+/* Contact */
 :root {
-  --accent: #27e0d6;           /* бирюзовый акцент */
-  --card: #1b1b1b;             /* блоки */
-  --field: #2a2a2a;            /* поля форм */
+  --accent: #27e0d6;
+  --card: #1b1b1b;
+  --field: #2a2a2a;
   --field-border: #3a3a3a;
 }
-
-/* Общая кнопка-акцент, чтобы не ломать твою .btn */
-.btn--accent {
+.btn--accent{
   background: var(--accent);
   color: #0b0b0b;
   font-weight: 800;
-  border: none;
   transition: transform .15s ease, opacity .2s ease;
 }
 .btn--accent:hover { opacity: .9; transform: translateY(-1px); }
 
-/* ---------- Contact ---------- */
 .contact { margin-top: 140px; }
-.contact__grid {
+.contact__grid{
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
   gap: 48px;
   align-items: start;
 }
+.contact__title{ color:#DEDEDE; margin-bottom: 24px; }
 
-.contact__title { color: #DEDEDE; margin-bottom: 24px; }
-
-.contact__list { list-style: none; padding: 0; margin: 0 0 28px; }
-.contact__item {
+.contact__list{ list-style: none; padding: 0; margin: 0 0 28px; }
+.contact__item{
   display: flex; align-items: center; gap: 16px;
-  margin: 18px 0;
-  color: #dedede;
+  margin: 18px 0; color: #DEDEDE;
 }
-
-.contact__icon {
-  width: 38px; height: 38px; display: inline-flex;
-  align-items: center; justify-content: center;
+.contact__icon{
+  width: 38px; height: 38px;
+  display: inline-flex; align-items: center; justify-content: center;
   border-radius: 10px; background: var(--card);
   box-shadow: 0 0 0 2px var(--field-border) inset;
 }
-.contact__icon svg { width: 22px; height: 22px; fill: var(--accent); }
+.contact__icon svg{ width: 22px; height: 22px; fill: var(--accent); }
+.contact__cv{ margin-top: 22px; }
 
-
-.social svg { width: 22px; height: 22px; fill: #cfcfcf; }
-.social:hover { transform: translateY(-2px); box-shadow: 0 0 0 2px var(--accent) inset; }
-
-.contact__cv { margin-top: 22px; }
-
-.contact__form {
+.contact__form{
   background: var(--card);
   padding: 22px;
   border-radius: 14px;
   box-shadow: 0 0 0 1px var(--field-border) inset;
   display: grid; gap: 18px;
+  width: 100%; max-width: 100%;
 }
 .contact__form input,
-.contact__form textarea {
-  width: 100%;
-  font: inherit;
-  color: #e6e6e6;
+.contact__form textarea{
+  width: 100%; max-width: 100%;
+  font: inherit; color: #e6e6e6;
   background: var(--field);
   border: 1px solid var(--field-border);
   border-radius: 10px;
   padding: 16px 18px;
   outline: none;
-  transition: border-color .2s ease, box-shadow .2s ease;
+  transition: border-color .2s, box-shadow .2s;
 }
 .contact__form input::placeholder,
-.contact__form textarea::placeholder { color: #9a9a9a; }
-
+.contact__form textarea::placeholder{ color: #9a9a9a; }
 .contact__form input:focus,
-.contact__form textarea:focus {
+.contact__form textarea:focus{
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(39,224,214,.2);
 }
+.contact__form textarea{ resize: vertical; }
 
-/* Респонсив */
-@media (max-width: 980px) {
-  .contact__grid { grid-template-columns: 1fr; }
-  .contact__form { order: 2; }
-  .contact__left { order: 1; }
+/* Responsive */
+@media (max-width: 1024px){
+  .projects__wrapper{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 980px){
+  .contact__grid{ grid-template-columns: 1fr; }
+}
+@media (max-width: 640px){
+  .projects__wrapper{ grid-template-columns: 1fr; }
+  .projects__wrapper .work{ height: 300px; }
 }

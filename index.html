@@ -1,155 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">  
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="style.css">
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fedir Volnianskyi</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+
+  <!-- Header -->
   <header class="header">
     <div class="container">
-      <a href="index.html" class="logo">
-            <img src="images/logo1.svg" alt="logo" width="38" height="40">
-            Fedir Volnianskyi
+      <a href="#home" class="logo">
+        <img src="images/logo1.svg" alt="logo" width="38" height="40">
+        Fedir Volnianskyi
       </a>
 
       <nav class="header__nav">
-            <a href="#!" class="header__limk">Home</a>   
-            <a href="#!" class="header__limk">Projekte</a>   
-            <a href="#!" class="header__limk">Kontakt</a>   
+        <a href="#home" class="header__limk">Home</a>
+        <a href="#projects" class="header__limk">Projekte</a>
+        <a href="#contact" class="header__limk">Kontakt</a>
       </nav>
     </div>
   </header>
 
   <main class="main">
-   <section class="welcome">
-    <div class="container">
-      <div class="welcome__desc">
-        <h1 class="welcome__title">Hallo, Ich bin Долбаеб
-            Ich bin Lernende an 
-            der BWS Limmattal. </h1>
-        <p class="welcome__text">Ich suche eine Lehrstelle als Informatiker,
-        und deshalb finden Sie auf dieser Website alles über mich - meine Projekte, meine Erfahrungen und meine Motivation.</p>  
-        <a class="btn welcome__btn" href="mailto:fedir.volnianskyi@bws-limmattal.ch">fedir.volnianskyi@bws-limmattal.ch</a>
+
+    <!-- Welcome -->
+    <section class="welcome" id="home">
+      <div class="container">
+        <div class="welcome__desc">
+          <h1 class="welcome__title">Hallo, ich bin Fedir.</h1>
+          <p class="welcome__text">
+            Ich heisse Fedir. Ich bin 17 Jahre alt und komme aus der Ukraine.
+            Zurzeit besuche ich die Berufswahlschule Limmattal in Dietikon.
+            In meiner Freizeit beschäftige ich mich gerne mit Programmierung,
+            Musik, Fussball und Schach. Mein Ziel ist eine Lehrstelle als Informatiker.
+          </p>
+          <a class="btn welcome__btn" href="mailto:fedir.volnianskyi@bws-limmattal.ch">
+            fedir.volnianskyi@bws-limmattal.ch
+          </a>
+        </div>
+
+        <img src="images/FedirFoto.jpg" alt="Fedir Foto" class="welcome__img">
       </div>
+    </section>
 
-      <img src="images/FedirFoto.jpg" alt="" class="welcome__img">
-    </div>
-   </section>
+    <!-- Über mich -->
+    <section id="about">
+      <h2>Über mich</h2>
+      <p>
+        Im April 2023 bin ich aus der Ukraine in die Schweiz gekommen. Um mich auf meine zukünftige
+        Lehrstelle vorzubereiten, besuche ich zurzeit das praktische Berufsvorbereitungsjahr im Bereich
+        Elektrotechnik an der Berufswahlschule Limmattal in Dietikon. Hier kann ich meine Kenntnisse in
+        Informatik verbessern und Neues lernen, das mir in der Lehre helfen wird. Unter anderem arbeiten
+        wir mit Robotern und schreiben mit Python und JavaScript Programme dafür.
+      </p>
+    </section>
 
-   <!-- Секция "Про меня" -->
-<section id="about">
-  <h2>Über mich</h2>
-  <p>
-    Im April 2023 bin ich aus der Ukraine in die Schweiz gekommen. Um mich auf meine zukünftige  
-Lehrstelle vorzubereiten, besuche ich zurzeit das praktische Berufsvorbereitungsjahr im Bereich  
-Elektrotechnik an der Berufswahlschule Limmattal in Dietikon. Hier kann ich meine Kenntnisse in  
-Informatik verbessern und Neues lernen, das mir in der Lehre helfen wird. Unter anderem arbeiten  
-wir mit Robotern und schreiben mit Python und JavaScript die Programme dafür.
-  </p>
-</section>
-
-
-
-
-
-<section class="works">
-  <div class="container">
-    <button class="works__btn" type="button">
-      <img class="works__icon" src="images/arrow.svg" alt="">
-      Projekte
-     </button>
-      <div class="works_wrapper"> 
-        
-        <a href="#!" class="work">
-          <img class="work__img" src="images/2048.jpg" alt="">
-          <span class="work__name">2048:Start</span>
-        </a>
-        <a href="#!" class="work">
-          <img class="work__img" src="images/2048gameover.jpg" alt="">
-          <span class="work__name">2048:GameOver</span>
+    <!-- Werke Button -->
+    <section class="works">
+      <div class="container">
+        <a class="works__btn" href="#projects">
+          <img class="works__icon" src="images/arrow.svg" alt="">
+          Projekte
         </a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="projects">
-    <div class="container">
-      <h2 class="title projects__title">Schritte Projekte</h2>
+    <!-- Projekte -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <h2 class="title projects__title">2048 Spiel</h2>
 
-      <div class="projects__wrapper">
-        <img class="projects__img" src="images/visual1.jpg" alt="">
-        <img class="projects__img" src="images/visual2.jpg" alt="">
-        <img class="projects__img" src="images/visual3.jpg" alt="">
-        <img class="projects__img" src="images/visual4.jpg" alt="">
-        <img class="projects__img" src="images/visual5.jpg" alt="">
-        <img class="projects__img" src="images/visual6.jpg" alt="">
+        <div class="projects__wrapper">
+          <a class="work" href="">
+            <img class="work__img" src="images/2048code.jpg" alt="2048 Code #1">
+            <span class="work__name">Code #1</span>
+          </a>
+
+          <a class="work" href="">
+            <img class="work__img" src="images/2048code2.jpg" alt="2048 Code #2">
+            <span class="work__name">Code #2</span>
+          </a>
+
+          <a class="work" href="">
+            <img class="work__img" src="images/2048code3.jpg" alt="2048 Code #3">
+            <span class="work__name">Code #3</span>
+          </a>
+
+          <a class="work" href="">
+            <img class="work__img" src="images/2048.jpg" alt="2048 Start">
+            <span class="work__name">2048:Start</span>
+          </a>
+
+          <a class="work" href="">
+            <img class="work__img" src="images/2048midgame.jpg" alt="2048 Midgame">
+            <span class="work__name">Midgame</span>
+          </a>
+
+          <a class="work" href="/Lebenslauf_Fedir_Volnianskyi.pdf">
+            <img class="work__img" src="images/2048gameover.jpg" alt="2048 Game Over">
+            <span class="work__name">Game Over</span>
+          </a>
+        </div>
       </div>
-
-    </div>
-  </selection>
-
-
-  <section class="projects projects--vertical">
-    <div class="container">
-      <h2 class="title projects__title">Projekte</h2>
-
-      <div class="projects__wrapper">
-        <img class="projects__img" src="images/project1.jpg" alt="">
-        <img class="projects__img" src="images/project2.jpg" alt="">
-        <img class="projects__img" src="images/project3.jpg" alt="">
-      </div>
-
-    </div>
-  </selection>
-
-
-<section id="contact" class="contact">
-  <div class="container contact__grid">
-    <!-- Левая колонка -->
-    <div class="contact__left">
-      <h2 class="title contact__title">Kontakt mich</h2>
-
-      <ul class="contact__list">
-        <li class="contact__item">
-          <span class="contact__icon" aria-hidden="true">
-            <!-- mail -->
-            <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 3.2-8 5.2L4 7.2V6l8 5.2L20 6v1.2Z"/></svg>
-          </span>
-          <a href="mailto:fedir.volnianskyi@bws-limmattal.ch">fedir.volnianskyi@bws-limmattal.ch</a>
-        </li>
-
-        <li class="contact__item">
-          <span class="contact__icon" aria-hidden="true">
-            <!-- phone -->
-            <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.1 11.1 0 0 0 3.5.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 7a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.1 11.1 0 0 0 .56 3.5 1 1 0 0 1-.25 1Z"/></svg>
-          </span>
-          <a href="tel:+41761234567">076 540 85 87</a>
-        </li>
-      </ul>
-
-      <a class="btn btn--accent contact__cv" href="cv/Fedir_Volnianskyi_CV.pdf" download>Download CV</a>
-    </div>
-
-    <!-- Правая колонка (форма) -->
-    <form class="contact__form" action="https://formsubmit.co/fedir.volnianskyi@bws-limmattal.ch" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="text"   name="name"    placeholder="Name" required>
-      <input type="email"  name="email"   placeholder="Your email" required>
-      <textarea name="message" rows="8"  placeholder="Your Message" required></textarea>
-      <button class="btn btn--accent" type="submit"></button>
-    </form>
-  </div>
-</section>
-
-
-  
-  </main>
-
+    </section>
 
     
-</body>     
+    <section class="projects projects--vertical">
+      <div class="container">
+        <h2 class="title projects__title">Anderes</h2>
+        <div class="projects__wrapper">
+          <a class="work" href=""><img class="work__img" src="images/project1.jpg" alt=""><span class="work__name">Projekt</span></a>
+          <a class="work" href=""><img class="work__img" src="images/project2.jpg" alt=""><span class="work__name">Projekt</span></a>
+          <a class="work" href=""><img class="work__img" src="images/project3.jpg" alt=""><span class="work__name">Projekt</span></a>
+        </div>
+      </div>
+    </section>
+    
 
+    <!-- Kontakt -->
+    <section id="contact" class="contact">
+      <div class="container contact__grid">
+
+        <div class="contact__left">
+          <h2 class="title contact__title">Kontakt mich</h2>
+
+          <ul class="contact__list">
+            <li class="contact__item">
+              <span class="contact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 3.2-8 5.2L4 7.2V6l8 5.2L20 6v1.2Z"/></svg>
+              </span>
+              <a href="mailto:fedir.volnianskyi@bws-limmattal.ch">fedir.volnianskyi@bws-limmattal.ch</a>
+            </li>
+
+            <li class="contact__item">
+              <span class="contact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.1 11.1 0 0 0 3.5.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 7a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.1 11.1 0 0 0 .56 3.5 1 1 0 0 1-.25 1Z"/></svg>
+              </span>
+              <a href="tel:+41765408587">076 540 85 87</a>
+            </li>
+          </ul>
+
+          <a class="btn btn--accent contact__cv" href="Lebenslauf_Fedir_Volnianskyi.pdf" download>
+            Lebenslauf herunterladen
+          </a>
+        </div>
+
+        <form class="contact__form" action="https://formsubmit.co/fedir.volnianskyi@bws-limmattal.ch" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text"   name="name"    placeholder="Name"   required>
+          <input type="email"  name="email"   placeholder="Email"  required>
+          <textarea name="message" rows="8" placeholder="Nachricht" required></textarea>
+          <button class="btn btn--accent" type="submit">Schicken</button>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+</body>
 </html>
